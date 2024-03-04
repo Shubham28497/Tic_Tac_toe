@@ -54,9 +54,14 @@ body {
   font-size: 5vmin;
 }
 .msg-container {
-  height: 15vmin;
+  height: 100vmin;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 4rem;
 }
 
-.hide{
+.hide {
   display: none;
 }
