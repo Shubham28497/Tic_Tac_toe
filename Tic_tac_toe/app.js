@@ -24,5 +24,12 @@ boxes.forEach((box) => {
       turnO = true;
     }
     box.disabled = true;
+    checkWinner();
   });
 });
+
+const checkWinner = () => {
+  for (let pattern of winnigPattern) {
+    console.log(pattern[0],pattern[1],pattern[2]);
+  }
+};
