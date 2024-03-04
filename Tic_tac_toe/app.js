@@ -29,7 +29,10 @@ boxes.forEach((box) => {
     checkWinner();
   });
 });
-
+const showWinner = (winner) => {
+  msg.innerText = `Congratulations, Winner is ${winner} `;
+  msgContainer.classList.remove("hide");
+};
 const checkWinner = () => {
   for (let pattern of winnigPattern) {
     let pos1 = boxes[pattern[0]].innerText;
@@ -37,7 +40,7 @@ const checkWinner = () => {
     let pos3 = boxes[pattern[2]].innerText;
     if (pos1 != "" && pos2 != "" && pos3 != "") {
       if (pos1 === pos2 && pos2 === pos3) {
-        console.log("winner");
+        showWinner(pos1);
       }
     }
   }
