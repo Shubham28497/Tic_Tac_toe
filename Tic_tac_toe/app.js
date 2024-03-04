@@ -16,5 +16,12 @@ const winnigPattern = [
 boxes.forEach((box) => {
   box.addEventListener("click", () => {
     console.log("box was clicked");
+    if (turnO) {
+      box.innerHTML = "O";
+      turnO = false;
+    } else {
+      box.innerHTML = "X";
+      turnO = true;
+    }
   });
 });
