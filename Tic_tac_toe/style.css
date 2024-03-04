@@ -56,3 +56,7 @@ body {
 .msg-container {
   height: 15vmin;
 }
+
+.hide{
+  display: none;
+}
