@@ -14,7 +14,11 @@ const winnigPattern = [
   [3, 4, 5],
   [6, 7, 8],
 ];
-
+const resetBtn = () => {
+  turnO = true;
+  enableBoxes();
+  msgContainer.classList.add("hide");
+};
 boxes.forEach((box) => {
   box.addEventListener("click", () => {
     console.log("box was clicked");
@@ -39,6 +43,12 @@ const disableBoxes = () => {
     box.disabled = true;
   }
 };
+const enableBoxes = () => {
+  for (let box of boxes) {
+    box.disabled = false;
+    box.innerText = "";
+  }
+};
 const checkWinner = () => {
   for (let pattern of winnigPattern) {
     let pos1 = boxes[pattern[0]].innerText;
@@ -51,3 +61,7 @@ const checkWinner = () => {
     }
   }
 };
+
+newGameBtn.addEventListener("click", resetBtn);
+resetbtn.addEventListener("click", resetBtn);
+
